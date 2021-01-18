@@ -1,0 +1,2 @@
+# NeoSummarizer
+Backend scoring algorithm
