@@ -1,2 +1,2 @@
 # NeoSummarizer
-Backend scoring algorithm
+Backend scoring algorithm. How does one enter multi-line strings?
