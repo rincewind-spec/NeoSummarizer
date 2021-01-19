@@ -3,5 +3,5 @@
 .Trashes
 Thumbs.db
 # Compiled Code. Do It Yourself!
-TextSummarizer.class
-Sentence.class
+.class
+
