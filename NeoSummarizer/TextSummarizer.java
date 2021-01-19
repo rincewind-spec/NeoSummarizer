@@ -7,7 +7,7 @@ public class TextSummarizer
 {
     /**Designed to score sentences
     @author Brennan Jacobs
-    @version 1.0
+    @version 1.0 (1/18/2021)
      */
     //Main method begins here
     public static void main(String[] args)
