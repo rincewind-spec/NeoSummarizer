@@ -13,7 +13,7 @@ public class TextSummarizer
     public static void main(String[] args)
     {
         String file = "";
-        //Fully sets up the scanner
+        //Fully sets up the scanner, test.
         Scanner input = new Scanner(System.in);
         //Asks the user for the title of the text
         System.out.print("What is the title? ");
