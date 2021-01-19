@@ -22,17 +22,17 @@ public class TextSummarizer
         System.out.print("What is the length of the summary between 0 and 99? ");
         int length = input.nextInt();
         input.nextLine();
-        int moreLines = 0;
-        //Asks the user for the text
-        while (moreLines == 0)
-        {
-            System.out.println("What is the next line? ");
-            file += input.nextLine();
-            System.out.println("Another line? (0==yes, 1==no) ");
-            moreLines = input.nextInt();
-            input.nextLine();
-        }
-        //Creates an arrayList for the storage of Sentence objects
+                System.out.printf("Please specify how many lines you want to enter: ");
+            String[] temp = new String[input.nextInt()];
+            input.nextLine(); //consuming the <enter> from input above
+
+            for (int i = 0; i < temp.length; i++) {
+                temp[i] = input.nextLine();
+            }
+
+            for (String s : temp) {
+                file += s;
+            }
         ArrayList <Sentence> sentences = new ArrayList();
         //Creates a space for the needed BreakIterator
         BreakIterator iteratorSentence =
