@@ -48,31 +48,23 @@ public class TextSummarizer
             //Fills sentences appropriately
             sentences.add(new Sentence(file.substring(start, end), title));
         }
-        //Runs a for loop for the purposes of printing the results
-        rankAndPrint(sentences, length);
-        //Program ends
-    }
-
-    //Writes the rankAndPrint method
-   public static void rankAndPrint(ArrayList <Sentence> a, int b)
-    {
         int currentScore = 0;
         int highScore = 0;
-        for(int i = 1; i < (int)((b/100) * a.size()); i++)
+        for(int i = 1; i < (int)((length/100) * sentences.size()); i++)
         {
             //Decides the ranking
-            for (int j = 0; j < a.size(); j++)
+            for (int j = 0; j < sentences.size(); j++)
             {
-                currentScore = a.get(j).getScore();
-                if (currentScore > a.get(highScore).getScore() &&
-                    a.get(j).notRanked() == true)
+                currentScore = sentences.get(j).getScore();
+                if (currentScore > sentences.get(highScore).getScore() &&
+                    sentences.get(j).notRanked() == true)
                 {
                     highScore = j;
                 }
             }
             //Prints the current rank
-            System.out.println(i + ". " + a.get(highScore).toString());
-            a.get(highScore).setRank(false);
+            System.out.println(i + ". " + sentences.get(highScore).toString());
+            sentences.get(highScore).setRank(false);
             highScore = 0;
         }
     }
